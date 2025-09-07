@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>RKMVCC - Computer Science Department</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">&lt;/&gt;</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="Title">
+            <div class="college-name"><div class="bar">|</div>| RKMVCC |<div class="bar">|</div> </div>
+        </section>
+    <main class="main-content">     
+        <section class="gears-section">
+            <div class="gear"></div>
+            <div class="gear large"></div>
+            <div class="gear"></div>
+        </section>
+
+        <section class="center-section">                   
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-title"></div>
+                    <div class="terminal-buttons">
+                        <button class="terminal-btn btn-minimize"></button>
+                        <button class="terminal-btn btn-maximize"></button>
+                        <button class="terminal-btn btn-close"></button>
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-output">Root@DESKTOP-4PICSD:~$ echo Welcome To The Computer Science Department <span class="courser"></span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Add some interactive functionality
+        document.querySelectorAll('.terminal-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('btn-close')) {
+                    document.querySelector('.terminal').style.opacity = '0.5';
+                    setTimeout(() => {
+                        document.querySelector('.terminal').style.opacity = '1';
+                    }, 1000);
+                }
+            });
+        });
+
+        // Add click effect to gears
+        document.querySelectorAll('.gear').forEach(gear => {
+            gear.addEventListener('click', function() {
+                this.style.animationDuration = '1s';
+                setTimeout(() => {
+                    this.style.animationDuration = this.classList.contains('large') ? '8s' : '10s';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
